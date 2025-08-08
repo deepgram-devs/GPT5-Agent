@@ -2,10 +2,6 @@
 
 **Empowering Everyone to Build with Voice**
 
-In a world where technology should serve everyone, not just those who speak code, VocalFlow breaks down the barriers between imagination and creation. This isn't just another development tool—it's a bridge that allows anyone, regardless of technical background, to bring their digital dreams to life through the most natural interface we have: our voice.
-
-Whether you're a small business owner with a game-changing idea, a teacher who wants to create educational tools, or simply someone who sees a problem that technology could solve, VocalFlow believes that your vision matters. You shouldn't need to learn programming languages, understand complex frameworks, or hire expensive developers to turn your ideas into reality. Just speak naturally about what you want to build, and watch as AI transforms your words into professional, fully-functional web applications.
-
 This is technology as it should be: intuitive, accessible, and empowering. Your voice is your code, your ideas are your blueprint, and your imagination is the only limit.
 
 ---
@@ -48,7 +44,7 @@ A voice-first AI assistant that helps users design and build web applications th
 - **Icons**: Lucide React (Modern icon library)
 
 ### **AI & Voice Processing**
-- **Language Model**: OpenAI GPT-4 (Advanced text generation and reasoning)
+- **Language Model**: OpenAI GPT-5 (Primary for conversation and code generation)
 - **Speech-to-Text**: Deepgram Nova-3 (Real-time speech recognition)
 - **Text-to-Speech**: Deepgram Aura-2 (Natural voice synthesis)
 - **Audio Processing**: Web Audio API (Browser-based audio handling)
@@ -57,7 +53,7 @@ A voice-first AI assistant that helps users design and build web applications th
 ### **Backend & Communication**
 - **WebSocket Server**: ws (Real-time bidirectional communication)
 - **HTTP Server**: Node.js built-in (Static file serving)
-- **Code Generation**: Anthropic API (Dynamic application creation)
+- **Code Generation**: OpenAI API (Dynamic application creation via GPT-5)
 - **Local Preview**: Child process spawning (Development server management)
 
 ### **Development Tools**
@@ -90,17 +86,17 @@ A voice-first AI assistant that helps users design and build web applications th
 
 ### **Phase 1: Voice Ideation (Human ↔ AI Conversation)**
 ```
-User speaks → Deepgram STT → Enhanced GPT-4 Processing → Deepgram TTS → User hears response
+User speaks → Deepgram STT → GPT-5 Processing → Deepgram TTS → User hears response
 ```
 1. **Audio Capture**: Browser captures microphone input at 24kHz
 2. **Speech Recognition**: Deepgram converts speech to text in real-time
-3. **Enhanced AI Processing**: Problem-focused GPT-4 challenges assumptions and drives innovation
+3. **AI Processing**: GPT-5 challenges assumptions and drives innovation
 4. **Speech Synthesis**: Deepgram converts AI responses back to speech
 5. **Accelerated Flow**: 3-4 focused exchanges with smart readiness detection
 
 ### **Phase 2: Specification Generation (AI → Silent YAML)**
 ```
-Conversation Context → GPT-4 Analysis → Silent YAML Generation → Seamless Transition
+Conversation Context → GPT-5 Analysis → Silent YAML Generation → Seamless Transition
 ```
 1. **Context Analysis**: AI reviews entire conversation history
 2. **Requirement Extraction**: Identifies key features, users, and technical needs
@@ -109,15 +105,14 @@ Conversation Context → GPT-4 Analysis → Silent YAML Generation → Seamless 
 
 ### **Phase 3: Code Generation (AI → Full Application)**
 ```
-YAML Specification → Claude Sonnet Code Generation → File System Creation → Local Preview
+YAML Specification → OpenAI GPT-5 Code Generation → File System Creation → Local Preview
 ```
 1. **Specification Processing**: AI analyzes YAML requirements silently
 2. **Architecture Planning**: Determines optimal file structure and components
 3. **Code Generation**: Creates complete Next.js application with TypeScript
 4. **Visual Progress**: Real-time progress bar with rotating status words
 5. **File System Setup**: Writes all files to local directory structure
-6. **Dependency Installation**: Automatically installs required npm packages
-7. **Development Server**: Spawns local preview server for immediate testing
+6. **Development Server**: Spawns local preview server for immediate testing
 
 ### **Phase 4: Preview & Iteration (Application → User)**
 ```
@@ -135,13 +130,13 @@ Generated App → Local Server → Browser Preview → User Feedback → Refinem
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Browser UI    │    │  Voice Agent    │    │   AI Services   │
 │ (React/Next.js) │◄──►│  (Node.js/WS)   │◄──►│ (OpenAI/Deepgram)│
-│  Progress Bar   │    │  YAML Filter    │    │  Enhanced GPT-4  │
+│  Progress Bar   │    │  YAML Filter    │    │  GPT-5          │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
          │                       │                       │
          ▼                       ▼                       ▼
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │  Audio Stream   │    │  Code Generator │    │  Generated App  │
-│ (WebAudio API)  │    │   (Claude API)  │    │  (Next.js App)  │
+│ (WebAudio API)  │    │   (OpenAI API)  │    │  (Next.js App)  │
 │ Status Updates  │    │ Progress Events │    │  Live Preview   │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
@@ -149,9 +144,9 @@ Generated App → Local Server → Browser Preview → User Feedback → Refinem
 ## ✨ Features
 
 - **🗣️ Voice-First Interface**: Speak naturally to describe your app idea
-- **🧠 Enhanced AI**: Problem-focused AI that challenges assumptions and drives innovation
+- **🧠 Enhanced AI**: GPT-5 conversation and code generation
 - **📊 Visual Progress**: Real-time progress bar with dynamic status updates
-- **🤖 AI-Powered Generation**: Uses OpenAI GPT-4 and Claude for understanding and code generation
+- **🤖 AI-Powered Generation**: Uses OpenAI GPT-5 for understanding and code generation (Claude optional)
 - **🎨 Beautiful Design**: Creates professionally designed applications, not plain templates
 - **⚡ Real-Time Preview**: See your app come to life instantly with live preview
 - **📱 Responsive Design**: Generated apps work perfectly on all devices
@@ -172,7 +167,7 @@ VocalFlow follows an enhanced 4-phase workflow:
 
 - **Frontend**: Next.js 14, React 18, TypeScript, Tailwind CSS
 - **Backend**: Node.js, WebSocket (ws)
-- **AI**: OpenAI GPT-4 (Enhanced), Anthropic Claude, Deepgram (Speech-to-Text & Text-to-Speech)
+- **AI**: OpenAI GPT-5 (Primary), Deepgram (STT & TTS), Anthropic Claude (optional)
 - **Voice Processing**: Real-time audio streaming with 24kHz sampling
 - **Progress System**: Custom React components with WebSocket event streaming
 
@@ -180,8 +175,9 @@ VocalFlow follows an enhanced 4-phase workflow:
 
 - Node.js 18+ 
 - npm or yarn
-- Anthropic API key
+- OpenAI API key (GPT-5 access)
 - Deepgram API key
+- (Optional) Anthropic API key (for Claude fallback)
 
 ## 🔧 Setup
 
@@ -199,9 +195,12 @@ VocalFlow follows an enhanced 4-phase workflow:
 3. **Set up environment variables**
    Create a `.env` file in the root directory:
    ```env
-   ANTHROPIC_API_KEY=your_anthropic_api_key_here
-   DEEPGRAM_API_KEY=your_deepgram_api_key_here
    OPENAI_API_KEY=your_openai_api_key_here
+   OPENAI_MODEL=gpt-5
+   OPENAI_CODEGEN_MODEL=gpt-5
+   DEEPGRAM_API_KEY=your_deepgram_api_key_here
+   # Optional, only if using Claude for codegen fallback
+   ANTHROPIC_API_KEY=your_anthropic_api_key_here
    ```
 
 4. **Start the development server**
@@ -214,43 +213,33 @@ VocalFlow follows an enhanced 4-phase workflow:
    - Frontend interface on `http://localhost:3001`
 
 5. **Enable Code Download Feature (Optional)**
-   To enable downloading generated code as ZIP files:
    ```bash
    npm install archiver @types/archiver
    ```
-   
+
    This adds the ability to download your generated applications as ZIP files for local development or deployment.
 
 ## 🎯 Usage
 
 1. **Open your browser** and navigate to `http://localhost:3001`
-
 2. **Click "Start Recording"** to begin voice interaction
-
-3. **Describe your app idea** naturally:
-   - "I want to create a tutoring marketplace for college students"
-   - "Build me a fitness tracking app with social features"
-   - "Create an e-commerce site for handmade crafts"
-
-4. **Engage with the problem-solving AI** that will challenge your assumptions and ask provocative questions to refine your concept
-
-5. **Signal readiness** by saying "Let's build this!" or "I'm ready to start building"
-
-6. **Watch real-time progress** as the AI generates your complete application with visual progress indicators
+3. **Describe your app idea** naturally
+4. **Signal readiness** by saying "Let's build this!"
+5. **Watch real-time progress** as the AI generates your complete application
 
 ## 📁 Project Structure
 
 ```
 VoiceCreation/
 ├── agents/                 # AI agents for different phases
-│   ├── ideation.ts        # Enhanced voice conversation agent with problem-solving AI
-│   └── codeGen.ts         # Code generation orchestrator with progress tracking
+│   ├── ideation.ts        # Enhanced voice conversation agent with GPT-5
+│   └── codeGen.ts         # OpenAI (GPT-5) code generation orchestrator
 ├── pages/                 # Next.js frontend pages
 │   ├── _app.tsx          # App wrapper with global styles
 │   └── index.tsx         # Main interface with visual progress system
 ├── utils/                 # Utility functions
-│   ├── claudeCodegen.ts  # Claude code generation (default)
-│   ├── openaiCodegen.ts  # OpenAI code generation (alternative)
+│   ├── claudeCodegen.ts  # Claude code generation (optional)
+│   ├── openaiCodegen.ts  # OpenAI GPT-5 code generation (default)
 │   └── localPreview.ts   # Local development server
 ├── test/                  # Test files
 │   └── testCodeGen.ts    # Code generation tests
@@ -323,9 +312,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Verify Deepgram API key is set correctly
 
 **AI not challenging assumptions?**
-- Ensure OpenAI API key is valid and has GPT-4 access
+- Ensure OpenAI API key is valid and has GPT-5 access
 - Check that the enhanced system prompts are loaded correctly
-- Verify the ideation agent is using the problem-solving configuration
+- Verify the ideation agent is using the GPT-5 configuration
 
 **Progress bar not updating?**
 - Check WebSocket connection in browser developer tools
@@ -333,7 +322,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Ensure the progress multiplier is configured correctly (10x)
 
 **Code generation failing?**
-- Verify Anthropic API key is valid and has sufficient credits
+- Verify OpenAI API key is valid and has sufficient credits
 - Check console logs for detailed error messages
 - Ensure all dependencies are installed
 - Verify YAML processing is working in the background
@@ -343,111 +332,41 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Look for build errors in the generation logs
 - Verify the generated package.json has correct dependencies
 
-## 🔮 Coming Soon
+## 🔄 Alternative Setup: Using Claude Codegen
 
-- **🎙️ Advanced Voice Editing**: Enhanced voice commands for detailed app modifications
-- **🔄 Iterative Improvements**: Multi-round refinement through natural conversation
-- **🌐 Direct Deployment**: One-click deployment to Vercel, Netlify, and other platforms
-- **📊 Analytics Integration**: Real-time user interaction tracking and app performance metrics
-- **🎨 Custom Design Systems**: Brand-specific design templates and component libraries
-- **🔍 Smart Debugging**: Voice-activated debugging and error resolution
-- **🌍 Multi-language Support**: International voice recognition and generation
+By default, VocalFlow uses OpenAI GPT-5 for code generation. If you prefer Anthropic Claude instead, switch as follows:
 
----
-
-## 🔄 Alternative Setup: Using OpenAI Codegen
-
-By default, Voice Creation uses Anthropic Claude for code generation. However, you can also use OpenAI's GPT models for code generation. Here's how to set it up:
-
-### **Prerequisites for OpenAI Setup**
-- OpenAI API key with GPT-4 access
-- All other requirements remain the same
+### **Prerequisites for Claude Setup**
+- Anthropic API key with Claude Sonnet access
 
 ### **Environment Variables**
-Add your OpenAI API key to your `.env` file:
+Add to your `.env` file:
 ```env
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
-DEEPGRAM_API_KEY=your_deepgram_api_key_here
-OPENAI_API_KEY=your_openai_api_key_here
 ```
 
 ### **Code Generation Changes**
-The system includes both OpenAI and Claude code generation utilities:
-
-- **Default**: `utils/claudeCodegen.ts` (Anthropic Claude)
-- **Alternative**: `utils/openaiCodegen.ts` (OpenAI GPT-4)
-
-### **Switching to OpenAI**
-To use OpenAI for code generation, modify the import in `agents/codeGen.ts`:
-
+Change the import and call in `agents/codeGen.ts`:
 ```typescript
 // Change from:
-import { runClaudeCodegen } from '../utils/claudeCodegen';
+import { runOpenAICodegen } from '../utils/openaiCodegen';
 
 // To:
-import { runOpenAICodegen } from '../utils/openaiCodegen';
+import { runClaudeCodegen } from '../utils/claudeCodegen';
 ```
 
 Then update the function call:
 ```typescript
 // Change from:
-const result = await runClaudeCodegen(yamlPrompt, sessionId, events);
+const result = await runOpenAICodegen(yamlPrompt, sessionId, events);
 
 // To:
-const result = await runOpenAICodegen(yamlPrompt, sessionId, events);
+const result = await runClaudeCodegen(yamlPrompt, sessionId, events);
 ```
 
-### **OpenAI-Specific Features**
-- **Model**: Uses GPT-4 for code generation
-- **Enhanced Prompting**: Optimized prompts for OpenAI's model behavior
-- **Consistent Output**: Same JSON format and file structure as Claude
-- **Error Handling**: Robust parsing for OpenAI's response format
-
-### **Performance Comparison**
-| Feature | Claude | OpenAI GPT-4 |
-|---------|---------|--------------|
-| Code Quality | Excellent | Excellent |
-| Response Speed | Fast | Moderate |
-| Context Handling | Superior | Good |
-| Cost | Lower | Higher |
-| Availability | High | High |
-
-### **Testing OpenAI Codegen**
-Test the OpenAI code generation specifically:
-```bash
-# Test with OpenAI (modify test file to use OpenAI)
-npm run test:codegen
-```
-
-### **Troubleshooting OpenAI Setup**
-**API Key Issues:**
-- Ensure your OpenAI API key has GPT-4 access
-- Check your OpenAI account has sufficient credits
-- Verify the API key is correctly set in `.env`
-
-**Model Limitations:**
-- OpenAI has rate limits that may affect generation speed
-- Large applications may hit token limits (use shorter descriptions)
-- Monitor your OpenAI usage dashboard for costs
-
-**Response Format:**
-- OpenAI responses may require different JSON parsing
-- Check console logs for parsing errors
-- The system includes fallback parsing for both models
-
-### **Best Practices for OpenAI**
-1. **Keep descriptions concise** to avoid token limits
-2. **Monitor API usage** to control costs
-3. **Test with simple apps first** before complex projects
-4. **Use specific, clear language** for better results
-
-### **Switching Back to Claude**
-To revert to Claude, simply change the imports back in `agents/codeGen.ts`:
-```typescript
-import { runClaudeCodegen } from '../utils/claudeCodegen';
-```
-
-Both systems generate the same high-quality applications with identical features and file structures. Choose based on your API preferences, cost considerations, and availability requirements.
+### **Performance Notes**
+- GPT-5 offers unified model usage for both voice and codegen
+- Claude Sonnet remains a solid alternative depending on preferences and cost
 
 ---
 

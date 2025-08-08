@@ -39,7 +39,8 @@ export async function runOpenAICodegen(
     apiKey: process.env.OPENAI_API_KEY
   });
 
-  events.onLog?.('Starting OpenAI code generation...');
+  const model = process.env.OPENAI_CODEGEN_MODEL || 'gpt-5';
+  events.onLog?.(`Starting OpenAI code generation with model: ${model} ...`);
 
   try {
     // Step 1: Generate the project structure and files
@@ -361,13 +362,12 @@ Return the complete project as JSON with the files array format specified above.
     events.onLog?.('Calling OpenAI GPT-4 to generate project files...');
 
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o',
+      model,
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userPrompt }
       ],
-      temperature: 0.1,
-      max_tokens: 8000
+      max_completion_tokens: 8000
     });
 
     const response = completion.choices[0]?.message?.content;

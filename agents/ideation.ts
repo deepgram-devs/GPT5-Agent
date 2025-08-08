@@ -11,6 +11,8 @@ import archiver from 'archiver';
 dotenv.config();
 
 const DEEPGRAM_API_KEY = process.env.DEEPGRAM_API_KEY;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const OPENAI_MODEL = process.env.OPENAI_MODEL || 'gpt-5';
 
 if (!DEEPGRAM_API_KEY) {
   console.error('Please set your DEEPGRAM_API_KEY in the .env file');
@@ -298,7 +300,13 @@ async function connectToAgent() {
           think: {
             provider: {
               type: 'open_ai',
-              model: 'gpt-4o-mini'
+              model: OPENAI_MODEL
+            },
+            endpoint: {
+              url: 'https://api.openai.com/v1/chat/completions',
+              headers: {
+                authorization: `Bearer ${OPENAI_API_KEY}`
+              }
             },
           /*
              * SYSTEM PROMPT  –  IDEATION & PROMPT-REVIEW AGENT
